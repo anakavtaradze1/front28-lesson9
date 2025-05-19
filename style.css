@@ -31,12 +31,11 @@ a {
 }
 main {
   background-color: blue;
-  height: 100vh;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 150px);
+  grid-auto-rows: minmax(150px,auto);
   gap: 15px;
 
   grid-template-areas:
@@ -44,6 +43,40 @@ main {
     "masonry1 fluid explicitly-placed negative-space"
     "flexible-breadth masonry2 explicitly-placed masonry3"
     "dom-order masonry2 named-tracks named-tracks";
+}
+
+.masonry1 {
+  grid-area: masonry1;
+}
+.responsive {
+  grid-area: responsive;
+}
+.overlap {
+  grid-area: overlap;
+}
+.fluid {
+  grid-area: fluid;
+}
+.explicitly-placed {
+  grid-area: explicitly-placed;
+}
+.negative-space {
+  grid-area: negative-space;
+}
+.masonry3 {
+  grid-area: masonry3;
+}
+.flexible-breadth {
+  grid-area: flexible-breadth;
+}
+.dom-order {
+  grid-area: dom-order;
+}
+.masonry2 {
+  grid-area: masonry2;
+}
+.named-tracks {
+  grid-area: named-tracks;
 }
 
 /*.masonry1{
@@ -83,36 +116,3 @@ main {
     grid-column: 3 / span 2;
 }*/
 
-.masonry1 {
-  grid-area: masonry1;
-}
-.responsive {
-  grid-area: responsive;
-}
-.overlap {
-  grid-area: overlap;
-}
-.fluid {
-  grid-area: fluid;
-}
-.explicitly-placed {
-  grid-area: explicitly-placed;
-}
-.negative-space {
-  grid-area: negative-space;
-}
-.masonry3 {
-  grid-area: masonry3;
-}
-.flexible-breadth {
-  grid-area: flexible-breadth;
-}
-.dom-order {
-  grid-area: dom-order;
-}
-.masonry2 {
-  grid-area: masonry2;
-}
-.named-tracks {
-  grid-area: named-tracks;
-}
